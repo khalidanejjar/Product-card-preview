@@ -1,0 +1,135 @@
+/* Reset */
+*{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Utility */
+:root{
+    --primary-color: hsl(158, 36%, 37%);
+    --secondary-color:hsl(30, 38%, 92%);
+    --tertiary-color:hsl(212, 21%, 14%);
+    --quaternary-color:hsl(228, 12%, 48%);
+    --white-color:hsl(0, 0%, 100%);
+}
+html,body{
+    background-color: var(--secondary-color);
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.container{
+    background-color: var(--white-color);
+    max-width: 580px;
+    /* height: 500px; */
+    margin: 0 auto;
+    margin-top: 5rem;
+    border-radius: 10px;
+    position: relative;/* Hides anything outside the container */
+    overflow: hidden;
+
+}
+/* Card layouts */
+
+.section__card{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.card__img img{
+    max-width: 300px; /*Taking half of the container*/
+    height: 100%; /* Ensures the image fills the container */
+    object-fit: cover;/* Ensures the image scales and crops properly */
+}
+.card__img .small{
+    display: none;
+}
+
+/* Card info */
+.card__info{
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    padding: 1.5rem;
+}
+/* Small title */
+.card-title-sm{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--quaternary-color);
+    margin-top: 0.8rem;
+    font-size: 13px;
+    font-weight: 400;
+}
+/* Large title */
+.card-title-lg{
+    font-family: "Fraunces", serif;
+    color: var(--tertiary-color);
+    word-wrap:break-word ;
+    width: 13rem;
+}
+/* text */
+.card-text{
+    color: var(--quaternary-color);
+    word-spacing: 3px;
+    line-height: 1.7rem;
+    font-weight: 500;
+}
+/* Price */
+.card__price{
+    display: flex;
+    justify-content: space-between;
+    max-width: 12rem;
+    align-items: center;
+}
+.card__price-old{
+    color: var(--quaternary-color); 
+    text-decoration: line-through;
+}
+.card__price-new{
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+
+}
+/* Button */
+.card__btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    max-width: 90%;
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+
+}
+.card__btn a{
+    text-decoration: none;
+    color: var(--white-color);
+    margin-left: 1rem;
+    font-weight: 700;
+    font-size: 11px;
+}
+
+@media (max-width:375px) {
+    /* Container size */
+    .container{
+        max-width: 350px;
+    }
+    /* Grid Layout */
+    .section__card{
+    grid-template-columns: repeat(1,1fr);
+    }
+    /* Large Image */
+    .card__img .large{
+        display: none;
+    }
+    /* Small Image */
+    .card__img .small{
+        display: block;
+        max-width: 100%;
+    }
+}
+
