@@ -8,6 +8,7 @@ const TestimonialCard = ({ customer }) => {
         {customer.rating.map((ratingPoint, idx) =>
           ratingPoint === 1 ? (
             <IoMdStar key={idx} />
+            
           ) : ratingPoint === 0.5 ? (
             <IoMdStarHalf key={idx} />
           ) : ratingPoint === 0 ? (
