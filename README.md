@@ -1,6 +1,8 @@
 ## Meta Front-End Developer Capstone Project
 LINK: https://little-lemon-capstone-orcin.vercel.app/#home
+HOME PAGE
 ![image alt](https://github.com/khalidanejjar/Little-Lemon-Capstone/blob/main/little-lemon-capstone-orcin.vercel.app_.png?raw=true)
+RESERVATION
 ![image alt](https://github.com/khalidanejjar/Little-Lemon-Capstone/blob/main/little-lemon-reservation.png?raw=true)
 # Little-Lemon 🍋
 
